@@ -6,6 +6,18 @@ app.controller("footer", footer);
 
 app.value("AppName", "This is a new Application");
 
+app.value("funcValue", function(){
+    console.log("Hi Value Function Called");
+});
+
+app.factory("factoryFunc", function(){
+    
+    return {name : "Rahul",
+            age : 20};
+    
+    
+})
+
 function ctrl(){
     this.contact = [
         {
@@ -88,8 +100,10 @@ function ctrl(){
     
 }
 
-   function header(AppName){
+   function header(AppName, funcValue, factoryFunc){
         this.title = AppName;
+        funcValue();
+        console.log(factoryFunc.name);
     }
     
      function footer(AppName){
