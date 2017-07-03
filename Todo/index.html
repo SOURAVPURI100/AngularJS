@@ -1,0 +1,30 @@
+<html ng-app = "myApp">
+<head>
+    <title>Module Example</title>
+    <script src = "angular.js"></script>
+    <script src = "app.js"></script>
+    <script src = "helloModule.js"></script>
+</head>
+<body>  
+    <div ng-controller ="myTodo as todo">
+        
+       <h1>Todo App</h1>   
+       <p>Add a Todo:</p>
+       <input type = "text" ng-model = "todo.addedText">
+       <button ng-click ="todo.add()">Add</button>
+       <p> Your Todos: </p>
+           <button ng-show = "!todo.editCheck" ng-click = "todo.edit()">edit</button>
+           <button ng-show = "todo.editCheck" ng-click = "todo.done()">done</button>
+           <div ng-repeat = "obj in todo.list">   
+               
+               <p ng-show = "!todo.editCheck" >{{$index + 1}}
+                   <span ng-bind = "obj"></span>
+                    <button ng-click = "todo.delete($index)" >delete</button></p> 
+               <p ng-show = "todo.editCheck">{{$index +1}} <input type ="text" ng-model = "obj" ></p>
+            </div>
+      
+    </div>
+     
+</body>    
+
+</html>

@@ -1,0 +1,36 @@
+<html ng-app = "MyApp">
+<head>
+    <title>Module Example</title>
+    <script src = "angular.js"></script>
+    <script src = "app.js"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+</head>
+<body>  
+    <div ng-controller ="main as main">
+        <input type="checkbox" ng-model = "main.ch">
+        <h1 ng-show = "main.ch"> Calculator App</h1>
+        <p>
+        <input type ="number" ng-model = "main.num1">
+        {{main.opr}}
+        <input type ="number" ng-model = "main.num2">
+        <button ng-click = "main.equals()">=</button>
+        {{main.ans}}
+        </p>
+        <p> Choose Operation
+        <button ng-click = "main.plus()">+</button>
+        <button ng-click = "main.minus()">-</button>
+        <button ng-click = "main.mul()">*</button>
+        <button ng-click = "main.divide()">/</button>    
+        
+        </p>
+        
+        
+        
+        
+    </div>
+    
+    
+    
+</body>    
+
+</html>

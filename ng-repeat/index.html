@@ -1,0 +1,28 @@
+<html ng-app = "ngRepeat">
+<head>
+    <title>Module Example</title>
+    <script src = "angular.js"></script>
+    <script src = "app.js"></script>
+</head>
+<body>  
+    <div ng-controller ="repeatCtrl as ctrl">
+       
+        <div ng-repeat ="obj in ctrl.list">
+            <p>
+            Element : {{$index}}
+            </p>
+        <p>
+            name : {{obj.name}}
+            </p>
+            <p>
+            name : {{obj.age}}
+            </p>
+            <hr>
+        </div>
+    </div>
+    
+    
+    
+</body>    
+
+</html>

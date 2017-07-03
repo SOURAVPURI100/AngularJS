@@ -1,0 +1,30 @@
+<html ng-app = "MyApp">
+<head>
+    <title>Module Example</title>
+    <script src = "angular.js"></script>
+    <script src = "app.js"></script>
+</head>
+<body>  
+    <div ng-controller ="myFunc">
+        <h1> My clock </h1>
+        <p>Current time is {{currentTime}}</p>  
+        <p>User Name <input type = "textbox" ng-model = "username"></p>
+        <P>CheckBox <input type ="checkbox" ng-model = "check"></P>
+        <P>Radio:
+            <input type ="radio" ng-model = "radioValue" value = "opt1"> Opt1
+            <input type ="radio" ng-model = "radioValue" value = "opt2"> Opt2
+            <input type ="radio" ng-model = "radioValue" value = "opt3"> Opt3
+        
+        </P>
+        <p>Username is {{username}}</p>
+        <p>CheckBox is {{check}}</p>
+        <p>Radio Button is {{radioValue}}</p>
+        
+        <button ng-click ="Update()">Update</button>      
+    </div>
+    
+    
+    
+</body>    
+
+</html>
